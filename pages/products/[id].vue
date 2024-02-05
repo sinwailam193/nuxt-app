@@ -16,7 +16,7 @@ definePageMeta({
 
 const { id } = useRoute().params;
 
-const { data: product, pending } = await useFetch(
+const { data: product, pending } = await useLazyFetch(
     `https://fakestoreapi.com/products/${id}`,
     { server: false, key: id }
 );

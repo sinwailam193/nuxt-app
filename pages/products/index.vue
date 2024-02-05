@@ -15,7 +15,10 @@ definePageMeta({
     layout: "products",
 });
 
-const { data: products } = await useFetch("https://fakestoreapi.com/products", {
-    server: false,
-});
+const { data: products } = await useLazyFetch(
+    "https://fakestoreapi.com/products",
+    {
+        server: false,
+    }
+);
 </script>
